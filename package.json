@@ -1,17 +1,17 @@
 {
-  "name": "NTH-start-project",
+  "name": "GreenValley",
   "version": "1.0.0",
-  "description": "Start a library of blocks and technical solutions for HTML/CSS/js page layout.",
+  "description": "Epic skills learning project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/gulp",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy"
   },
-  "author": "Nikolay Gromov",
+  "author": "Gubin Alexey",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicothin/NTH-start-project.git"
+    "url": "https://github.com/6y6a/GreenValley.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -43,7 +43,7 @@
     "mkdirp": "^0.5.1"
   },
   "config": {
-    "ghPages": "http://nicothin.github.io/NTH-start-project/blocks_library.html",
+    "ghPages": "http://6y6a.github.io/GreenValley/blocks_library.html",
     "directories": {
       "source": "./src",
       "build": "./build"
