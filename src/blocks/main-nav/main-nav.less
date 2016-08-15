@@ -4,21 +4,18 @@
 
 
 .main-nav {
-  position: relative;
-  z-index: 1;
-  margin-left: -0.9rem;
-  margin-right: -0.9rem;
   font: 500 14px @font-family--fira;
 
   &__list {
     padding: 0;
-    margin: 0;
+    margin: 0 -2.5rem;
     list-style: none;
     border-bottom: 1px solid @gray-light;
 
     @media (min-width: @screen-lg) {
       display: flex;
       flex-wrap: wrap;
+      margin: 0 -1rem;
       border-bottom-color: transparent;
     }
   }
