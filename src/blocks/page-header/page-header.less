@@ -4,5 +4,45 @@
 
 
 .page-header {
+  .container();
+  min-height: 9rem;
+
+
+  &__inner {
+    .row(@xs-grid-gutter: 0;
+         @sm-grid-gutter: 0;
+         @md-grid-gutter: 0);
+    align-items: center;
+  }
+  
+
+  &__contact {
+    .col-offset(lg);
+    .col(lg, 3);
+    .hidden-down(md);
+    font: 14px/1 @font-family--fira;
+    color: @gray-darker;
+  }
+
+  &__phone {
+    display: block;
+    font: 18px/1 @font-family--sans;
+    color: @gray-darker;
+  }
+
+  &__main-logo {
+    .col(lg, 2);
+  }
+
+  &__main-nav {
+    .col(lg, 4);
+  }
+
+  &__btn {
+    .col(lg, 2);
+    .hidden-down(md);
+  }
+
+
 
 }
