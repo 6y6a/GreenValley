@@ -4,5 +4,46 @@
 
 
 .review {
-  
+  position: relative;
+  display: none;
+  padding: 122px 5.5em 29px;
+  background-color: @color-review;
+  font-family: @font-family--fira;
+  color: @gray-darker;
+  text-align: center;
+
+  &__user {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: -25px;
+    transform: translate(-50%, 0);
+    font-family: inherit;
+  }
+
+  &__img {
+    border: 2px solid @color-review;
+  }
+
+  &__name {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.2857;
+  }
+
+  &__message {
+    margin: 0 0 23px;
+    font-size: 16px;
+    line-height: 1.375;
+    color:  #000;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 1.2857;
+  }
+
+  &--active {
+    display: block;
+  }
 }
