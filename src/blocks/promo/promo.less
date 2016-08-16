@@ -8,14 +8,44 @@
   display: flex;
   flex-wrap: wrap;
 
-  //
-  //& > * {
-  //  display: block;
-  //  width: 100%;
-  //}
+
+  & > * {
+    width: 100%;
+  }
 
   &__tabs {
     order: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 -11px;
+    padding: 10px 2.5rem 4px;
+    list-style: none;
+
+    @media (min-width: @screen-lg) {
+      padding: 33px 1rem 27px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 7px 11px;
+    font: 14px/1 @font-family--fira;
+    color: #838383;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: @color-main--orange;
+      text-decoration: none;
+    }
+
+    &--active {
+      color: @color-main--orange;
+    }
+
+    @media (min-width: @screen-lg) {
+      padding: 7px 15px;
+    }
   }
 
   &__vacation-type {
