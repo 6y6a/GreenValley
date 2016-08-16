@@ -4,5 +4,36 @@
 
 
 .offer-slider {
-  
+
+  &__slide {
+    position: relative;
+    display: none;
+    min-height: 299px;
+    background: @gray-lighter url("../img/offer-slider-xs.jpg") center bottom no-repeat;
+    background-size: cover;
+    
+    &--active {
+      display: block;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    display: inline-block;
+    max-width: 296px;
+    padding: 20px;
+    font: 16px/1.25 @font-family--fira;
+    text-align: left;
+    color: @gray-darker;
+    background-color: fadeout(#fff, 10%);
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font: 18px/1.33 @font-family--fira;
+    text-transform: uppercase;
+    color: @color-main--orange;
+  }
 }
