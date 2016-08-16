@@ -4,5 +4,43 @@
 
 
 .vacation-type {
+
+  &__slide {
+    display: none;
+    min-height: 347px;
+    background: @gray-light url("../img/vacation-type-xs-1.jpg") center bottom no-repeat;
+    background-size: cover;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__inner {
+    .container();
+    padding-top: 53px;
+    padding-bottom: 53px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 36px;
+    padding: 0 50px;
+    font: 26px/1 @font-family--serif;
+    color: #000;
+    text-align: center;
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font: 16px/1.375 @font-family--fira;
+    color: #000;
+    text-align: center;
+  }
+
+  &__list {
+    .hidden-down(sm);
+  }
   
 }
