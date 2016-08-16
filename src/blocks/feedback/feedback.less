@@ -4,5 +4,24 @@
 
 
 .feedback {
-  
+  min-height: 617px;
+  padding-top: 69px;
+  padding-bottom: 49px;
+  background: @color-main url("../img/feedback-xs.jpg") center bottom no-repeat;
+  background-size: cover;
+
+  &__inner {
+    .container();
+  }
+
+  &__title {
+    margin: 0;
+    font: 26px @font-family--serif;
+    color:  #fff;
+    text-align: center;
+  }
+
+  &__nav {
+    .hidden-down(md);
+  }
 }
