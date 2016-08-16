@@ -2,17 +2,19 @@
 //  Генератор правил для контейнера
 //------------------------------------------------------------------------------
 
-.container() {
+.container(@gutter: @grid-gutter-width) {
   display: block;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+
+  & when not (@gutter = 0) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 
   @media (min-width: @screen-sm) {
     width: @container-sm;
-    @gutter: @grid-gutter-width;
     padding-left: @gutter;
     padding-right: @gutter;
   }
