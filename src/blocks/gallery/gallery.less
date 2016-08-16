@@ -4,5 +4,29 @@
 
 
 .gallery {
-  
+
+  &__inner {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 310px;
+    padding-bottom: 50px;
+    background-color: @color-main--orange;
+
+    @media (min-width: @screen-lg) {
+      width: @container-lg;
+      @gutter: @grid-gutter-width / 2;
+      padding-left: @gutter;
+      padding-right: @gutter;
+    }
+
+    @media (min-width: @screen-xl) {
+      width: @container-xl;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: @container-xxl;
+    }
+  }
 }
