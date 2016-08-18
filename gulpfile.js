@@ -272,6 +272,7 @@ gulp.task('serve', gulp.series('build', function() {
   browserSync.init({
     server: dirs.build,
     port: port,
+    browser: 'chrome',
     startPath: 'index.html'
   });
   gulp.watch([
