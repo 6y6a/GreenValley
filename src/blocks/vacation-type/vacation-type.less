@@ -4,43 +4,90 @@
 
 
 .vacation-type {
+  .container(0);
 
-  &__slide {
+  &__inner {
+    .row(0, 0, 0);
     display: none;
-    min-height: 347px;
-    background: @gray-light url("../img/vacation-type-xs-1.jpg") center bottom no-repeat;
-    background-size: cover;
 
     &--active {
       display: block;
     }
+
   }
 
-  &__inner {
-    .container();
+  &__slide {
+    .col(lg, 8);
+    .col-offset(lg, 2);
+    min-height: 347px;
     padding-top: 53px;
-    padding-bottom: 53px;
+    padding-bottom: 49px;
+    background: url(../img/vacation-type-xs-1.jpg) top center no-repeat;
+    background-size: cover;
+
+    @media (min-width: @screen-md) {
+      background-image: url(../img/vacation-type-sm-1.jpg);
+      background-size: contain;
+
+    }
   }
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 36px;
-    padding: 0 50px;
-    font: 26px/1 @font-family--serif;
+    margin: 0 0 32px;
+    padding: 0 80px;
+    font: 26px/1 @font-family--serif-cap;
     color: #000;
     text-align: center;
+
+    @media (min-width: @screen-lg) {
+      font-size: 30px;
+    }
   }
 
   &__description {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 9px;
+    padding: 0 30px;
     font: 16px/1.375 @font-family--fira;
     color: #000;
     text-align: center;
+
+    @media (min-width: @screen-md) {
+      padding: 0 70px;
+    }
   }
 
   &__list {
     .hidden-down(sm);
+    .row(0, 0, 0, 0, 0, 0);
+    margin: 0;
+    justify-content: center;
+    padding: 0 70px;
+    list-style: none;
+
+    @media (min-width: @screen-lg) {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    .col(md, 1, 4, 2rem);
+    .col(lg, 1, 6, 2rem);
+    margin: 27px 0 0 0;
+    font: 500 14px/1.28571 @font-family--fira;
+    color: @gray-darker;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 14px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
   }
   
 }
