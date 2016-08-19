@@ -4,36 +4,32 @@
 
 
 .btn {
-  box-sizing: border-box;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: @field-padding-top @field-padding-horizontal @field-padding-bottom;
+  padding: 14px 32px 12px;
   white-space: nowrap;
   cursor: pointer;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 1em;
-  font-family: inherit;
-  line-height: @line-height;
+  font: 500 14px/1 @font-family--fira;
   text-decoration: none;
-  text-transform: none;
-  border-radius: @border-radius;
-  min-height: 2.125em;
-  border: 1px solid @gray-light;
-  color: @text-color;
-  background-color: @gray-lighter;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  color: #fff;
+  background-color: @color-main--orange;
   background-image: none;
+  transition: all ease 0.4s;
 
   &--hover,
   &:hover {
     text-decoration: none;
-    color: @text-color;
-    background-color: darken(@gray-lighter, 10%);
-    border-color: darken(@gray-light, 12%);
+    color: #fff;
+    background-color: @color-main--orange--hover;
   }
 
   &--active,
@@ -42,9 +38,8 @@
     text-decoration: none;
     outline: 0;
     box-shadow: none;
-    color: @text-color;
-    background-color: darken(@gray-lighter, 15%);
-    border-color: darken(@gray-light, 17%);
+    color: #fff;
+    background-color: @color-main--orange--hover;
   }
 
   &--disabled,
@@ -59,101 +54,54 @@
       pointer-events: none;
     }
   }
-
-
-
-  &--main {
-    color: #fff;
-    background-color: @color-main;
-    border: 1px solid @color-main;
+  
+  &--white {
+    border: 2px solid #fff;
+    background-color: transparent;
 
     &--hover,
     &:hover {
-      color: #fff;
-      background-color: darken(@color-main, 10%);
-      border-color: darken(@color-main, 12%);
-    }
-
-    &--active,
-    &:active,
-    &:focus {
-      color: #fff;
-      background-color: darken(@color-main, 15%);
-      border-color: darken(@color-main, 17%);
-    }
-
-    &--disabled,
-    &:disabled {
-      color: #fff;
-      background-color: @color-main;
-      border-color: @color-main;
+      background-color: #fff;
+      color: @color-main--green;
     }
   }
 
-  &--danger {
-    color: #fff;
-    background-color: @color-danger;
-    border: 1px solid @color-danger;
+  &--green {
+    padding: 20px 30px;
+    border-radius: 0;
+    background-color: @color-main--green;
 
     &--hover,
     &:hover {
-      color: #fff;
-      background-color: darken(@color-danger, 10%);
-      border-color: darken(@color-danger, 12%);
-    }
-
-    &--active,
-    &:active,
-    &:focus {
-      color: #fff;
-      background-color: darken(@color-danger, 15%);
-      border-color: darken(@color-danger, 17%);
-    }
-
-    &--disabled,
-    &:disabled {
-      color: #fff;
-      background-color: @color-danger;
-      border-color: @color-danger;
+      background-color: @color-main--green-hover;
     }
   }
 
-  &--success {
-    color: #fff;
-    background-color: @color-success;
-    border: 1px solid @color-success;
+  &--icon {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:before {
+      .icon();
+      margin-top: -2px;
+      padding-right: 9px;
+      content: "\f133";
+    }
+  }
+
+  &--link {
+    padding: 0;
+    background-color: transparent;
+    color: @gray-darker;
+    border-radius: 0;
+    border-bottom: 1px dashed @gray-darker;
 
     &--hover,
     &:hover {
-      color: #fff;
-      background-color: darken(@color-success, 10%);
-      border-color: darken(@color-success, 12%);
+      background-color: inherit;
+      color: inherit;
+      border-bottom: none;
     }
-
-    &--active,
-    &:active,
-    &:focus {
-      color: #fff;
-      background-color: darken(@color-success, 15%);
-      border-color: darken(@color-success, 17%);
-    }
-
-    &--disabled,
-    &:disabled {
-      color: #fff;
-      background-color: @color-success;
-      border-color: @color-success;
-    }
-  }
-
-  &--lg {
-    font-size: @font-size--h3;
-  }
-
-  &--sm {
-    font-size: @font-size--small;
-    padding-top: round((@field-padding-top / 2), 2);
-    padding-bottom: round((@field-padding-bottom / 2), 2);
   }
 
   &--block {
