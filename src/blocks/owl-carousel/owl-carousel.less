@@ -2,15 +2,6 @@
 
 @import '../../less/variables.less';     // только для удобства обращения к переменным
 
-
-
-/**
- * Owl Carousel v2.1.6
- * Copyright 2013-2016 David Deutsch
- * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
- */
-
-
 /*
  *  Owl Carousel - Core
  */
@@ -167,3 +158,32 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
+
+
+.owl-carousel--preview {
+  display: none !important;
+  
+  .owl-item {
+    position: relative;
+    cursor: pointer;
+
+    &:hover:after {
+      background-color: transparent;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: fadeout(#000, 50%);
+      transition: all 0.4s ease;
+    }
+  }
+
+  @media (min-width: @screen-md) {
+    display: block !important;
+  }
+}
