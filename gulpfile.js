@@ -19,6 +19,7 @@ const gulpIf = require('gulp-if');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
+const spritesmith = require('gulp.spritesmith');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const path = require('path');
@@ -32,6 +33,7 @@ const browserSync = require('browser-sync').create();
 const replace = require('gulp-replace');
 const ghPages = require('gulp-gh-pages');
 const size = require('gulp-size');
+const merge = require('merge-stream');
 const fs = require('fs');
 
 // Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
@@ -156,6 +158,46 @@ gulp.task('img:opt', function (callback) {
   else {
     console.log('---------- Оптимизация картинок: ошибка (не указана папка)');
     console.log('---------- Пример вызова команды: folder=src/blocks/block-name/img_to_bg/ npm start img:opt');
+    callback();
+  }
+});
+
+// Сборка PNG-спрайта для блока sprite-png
+gulp.task('png', function (callback) {
+  let spritePath = dirs.source + '/blocks/sprite-png/png/';
+  if(fileExist(spritePath) !== false) {
+    console.log('---------- Сборка PNG спрайта');
+    var sprite = gulp.src(spritePath + '*.png')
+      .pipe(imagemin({
+        use: [pngquant()]
+      }))
+      .pipe(spritesmith({
+        imgName: 'sprite-png.png',
+        cssName: 'sprite-png.css',
+        cssOpts: {
+          cssSelector: function(sprite) { return '.sprite-png--' + sprite.name}}
+      }));
+
+    var img = sprite.img
+      .pipe(gulp.dest(dirs.source + '/blocks/sprite-png/img'))
+      .pipe(size({
+        title: 'Размер',
+        showFiles: true,
+        showTotal: false
+      }));
+
+    var less = sprite.css
+      .pipe(rename('sprite-png.less'))
+      .pipe(gulp.dest(dirs.source + '/blocks/sprite-png'))
+      .pipe(size({
+        title: 'Размер',
+        showFiles: true,
+        showTotal: false
+      }));
+    return merge(img, less);
+  }
+  else {
+    console.log('---------- Сборка PNG спрайта: нет папки с картинками');
     callback();
   }
 });

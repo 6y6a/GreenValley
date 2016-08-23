@@ -48,5 +48,9 @@
       "source": "./src",
       "build": "./build"
     }
+  },
+  "dependencies": {
+    "gulp.spritesmith": "^6.2.1",
+    "merge-stream": "^1.0.0"
   }
 }
