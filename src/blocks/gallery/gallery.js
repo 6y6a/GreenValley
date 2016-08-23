@@ -5,14 +5,16 @@ $(document).ready(function(){
   $photo.owlCarousel({
     items : 1,
     startPosition: 3,
-    smartSpeed: 400
+    smartSpeed: 400,
+    dots: false
   });
 
   $preview.owlCarousel({
     items : 6,
     startPosition: 3,
     smartSpeed: 400,
-    center: true
+    center: true,
+    dots: false
   });
 
   // Добавляем индексы каждому элементу
