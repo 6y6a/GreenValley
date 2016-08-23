@@ -4,5 +4,36 @@
 
 
 .place {
-  
+  display: block;
+  padding-bottom: 50px;
+  background-color: #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__img {
+    line-height: 0;
+    font-size: 0;
+  }
+
+  &__title {
+    margin: 40px 0 13px;
+    font: 26px/1 @font-family--serif;
+    color: @gray-darker;
+    text-align: center;
+  }
+
+  &__description {
+    margin: 0;
+    font: 500 14px/1 @font-family--fira;
+    color: @gray-darker;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--bold {
+      font-size: 18px;
+      color: @color-main--orange;
+    }
+  }
 }
