@@ -4,5 +4,41 @@
 
 
 .selection {
+  padding: 50px 0;
+  background: @color-main--green;
+  background: url(../img/selection-bg-xs.jpg) center center no-repeat;
+  background-size: cover;
+
+  &__inner {
+    .container();
+  }
+
+  &__wrapper {
+    .row(0);
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    font: 26px/1.230769 @font-family--serif-cap;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__place {
+    margin-top: 19px;
+    .col(sm, 6);
+    .col(lg, 4);
+
+    &--offset {
+      .col-offset(lg, 2);
+    }
+  }
   
+  @media (min-width: @screen-md) {
+    background-image: url(../img/selection-bg-md.jpg);
+  }
+
+  @media (min-width: @screen-md) {
+    background-image: url(../img/selection-bg-lg.jpg);
+  }
 }
