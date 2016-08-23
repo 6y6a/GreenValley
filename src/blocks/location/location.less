@@ -9,6 +9,10 @@
     .container(0);
   }
 
+  &__wrapper {
+    .row(0, 0, 0);
+  }
+
   &__title {
     margin: 50px 50px 34px;
     font: 26px @font-family--serif;
@@ -19,7 +23,13 @@
   &__map {
     width: 100%;
     min-height: 400px;
-    background: @gray-light url("../img/map.jpg") center bottom no-repeat;
-    background-size: cover;
+  }
+
+  &__transport {
+    .col(lg, 5);
+
+    &--left {
+      .col-offset(lg);
+    }
   }
 }

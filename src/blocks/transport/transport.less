@@ -4,5 +4,39 @@
 
 
 .transport {
+  padding-top: 40px;
+  color: @gray-darker;
+  text-align: center;
+
+  &__title {
+    margin: 22px 0 18px;
+    font: 500 14px/1 @font-family--fira;
+    text-transform: uppercase;
+  }
+
+  &__route {
+    margin: 0;
+    padding: 0 45px;
+    font: 16px/1.375 @font-family--fira;
+    word-wrap: normal;
+    word-break: keep-all;
+
+    &--bold {
+      font-weight: 500;
+    }
+
+    &--br {
+      display: none;
+
+      @media (min-width: @screen-md) {
+        display: block;
+      }
+    }
+    
+    @media (min-width: @screen-lg) {
+      padding: 0 25px 0;
+      text-align: left;
+    }
+  }
   
 }

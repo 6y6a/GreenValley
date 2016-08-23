@@ -40,9 +40,9 @@
   <div class="vacation-slider  promo__vacation-slider">
     <section class="vacation-slider__slide  vacation-slider__slide--active" id="family" style="">
       <picture>
-        <source srcset="../img/vacation-slide-lg-1.jpg" media="(min-width: 1200px)">
-        <source srcset="../img/vacation-slide-sm-1.jpg" media="(min-width: 768px)">
-        <img srcset="../img/vacation-slide-xs-1.jpg" alt="слайд-1" class="vacation-slider__image">
+        <source srcset="./img/vacation-slide-lg-1.jpg" media="(min-width: 1200px)">
+        <source srcset="./img/vacation-slide-sm-1.jpg" media="(min-width: 768px)">
+        <img srcset="./img/vacation-slide-xs-1.jpg" alt="слайд-1" class="vacation-slider__image">
       </picture>
       <div class="vacation-slider__inner">
         <h1 class="vacation-slider__title">
@@ -60,9 +60,9 @@
     </section>
     <section class="vacation-slider__slide" id="enterprise" style="">
       <picture>
-        <source srcset="../img/vacation-slide-lg-2.jpg" media="(min-width: 1200px)">
-        <source srcset="../img/vacation-slide-sm-2.jpg" media="(min-width: 768px)">
-        <img srcset="../img/vacation-slide-xs-2.jpg" alt="слайд-2" class="vacation-slider__image">
+        <source srcset="./img/vacation-slide-lg-2.jpg" media="(min-width: 1200px)">
+        <source srcset="./img/vacation-slide-sm-2.jpg" media="(min-width: 768px)">
+        <img srcset="./img/vacation-slide-xs-2.jpg" alt="слайд-2" class="vacation-slider__image">
       </picture>
       <div class="vacation-slider__inner">
         <div class="vacation-slider__inner">
@@ -150,14 +150,67 @@
 
 <div class="gallery">
   <div class="gallery__inner">
-    <a href="#" class="gallery__photo"><img src="" alt="Главное фото"></a>
-    <ul class="gallery__preview">
-      <li><a href="" class="gallery__thumbnail"><img src="" alt="Фото превью 1"></a></li>
-      <li><a href="" class="gallery__thumbnail"><img src="" alt="Фото превью 2"></a></li>
-      <li><a href="" class="gallery__thumbnail"><img src="" alt="Фото превью 3"></a></li>
-      <li><a href="" class="gallery__thumbnail"><img src="" alt="Фото превью 4"></a></li>
-      <li><a href="" class="gallery__thumbnail"><img src="" alt="Фото превью 5"></a></li>
-    </ul>
+    <div class="owl-carousel" id="gallery__photo">
+      <picture>
+        <source srcset="./img/gallery-lg-1.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-1.jpg" alt="слайд-1">
+      </picture>
+      <picture>
+        <source srcset="./img/gallery-lg-2.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-2.jpg" alt="слайд-2">
+      </picture>
+      <picture>
+        <source srcset="./img/gallery-lg-3.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-3.jpg" alt="слайд-3">
+      </picture>
+      <picture>
+        <source srcset="./img/gallery-lg-4.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-4.jpg" alt="слайд-4">
+      </picture>
+      <picture>
+        <source srcset="./img/gallery-lg-5.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-5.jpg" alt="слайд-5">
+      </picture>
+      <picture>
+        <source srcset="./img/gallery-lg-6.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-6.jpg" alt="слайд-6">
+      </picture>
+      <picture>
+        <source srcset="./img/gallery-lg-7.jpg" media="(min-width: 768px)">
+        <img srcset="./img/gallery-xs-7.jpg" alt="слайд-7">
+      </picture>
+    </div>
+    <div class="owl-carousel  owl-carousel--preview" id="gallery__preview">
+      <picture>
+        <source srcset="./img/thumbnail-1.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-1">
+      </picture>
+      <picture>
+        <source srcset="./img/thumbnail-2.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-2">
+      </picture>
+      <picture>
+        <source srcset="./img/thumbnail-3.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-3">
+      </picture>
+      <picture>
+        <source srcset="./img/thumbnail-4.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-4">
+      </picture>
+      <picture>
+        <source srcset="./img/thumbnail-5.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-5">
+      </picture>
+      <picture>
+        <source srcset="./img/thumbnail-6.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-6">
+      </picture>
+      <picture>
+        <source srcset="./img/thumbnail-7.jpg" media="(min-width: 768px)">
+        <img srcset="" alt="фото препросмотра-7">
+      </picture>
+    </div>
+    </div>
   </div>
 </div>
 
@@ -172,7 +225,7 @@
       <div class="review-slider  feedback__review-slider">
         <section class="review-slider__item  review-slider__item--active">
           <figure class="review-slider__user">
-            <img class="review-slider__img" src="../img/user-1.jpg" alt="Посетитель №1">
+            <img class="review-slider__img" src="./img/user-1.jpg" alt="Посетитель №1">
             <figcaption class="review-slider__name">Екатерина В.</figcaption>
             <a href="#" class="review-slider__link"><span class="icon icon--vk"></span></a>
           </figure>
@@ -183,7 +236,7 @@
         </section>
         <section class="review-slider__item  review-slider__item--active">
           <figure class="review-slider__user">
-            <img class="review-slider__img" src="../img/user-2.jpg" alt="Посетитель №2">
+            <img class="review-slider__img" src="./img/user-2.jpg" alt="Посетитель №2">
             <figcaption class="review-slider__name">Екатерина В.</figcaption>
             <a href="" class="review-slider__link"><span class="icon icon--facebook"></span></a>
           </figure>
@@ -225,21 +278,45 @@
 <div class="location">
   <div class="location__inner">
     <h1 class="location__title">Как до нас добраться</h1>
-    <iframe src="" frameborder="0" class="location__map"></iframe>
-    <section class="transport">
-      <span class="transport__icon"></span>
-      <h1 class="transport__title">Автобусы</h1>
-      <p class="transport__route"><b>№ 211</b> от станции метро «Черная речка» до остановки «Санаторий Репино»</p>
-      <p class="transport__route"><b>№ 305К</b> от станции метро «Старая деревня»</p>
-      <p class="transport__route"><b>№ 680К</b> от станции метро «Проспект Просвещения»</p>
-      <p class="transport__route"><b>№ 400К</b> от станции метро «Площадь Ленина»</p>
-    </section>
-    <section class="transport">
-      <span class="transport__icon"></span>
-      <h1 class="transport__title">Электропоезд</h1>
-      <p class="transport__route">Электропоезд Выборгского направления от Финляндского вокзала Санкт-Петербурга
-        до платформы «Репино»</p>
-    </section>
+    <div class="location__map" id="map"></div>
+    <div class="location__wrapper">
+      <section class="transport  location__transport  location__transport--left">
+        <span class="sprite-png  sprite-png--auto  transport__icon"></span>
+
+        <h1 class="transport__title">Автобусы</h1>
+
+        <p class="transport__route">
+          <b class="transport__route--bold">№ 211</b>
+          от станции метро «Черная речка» до остановки «Санаторий Репино»
+        </p>
+
+        <p class="transport__route">
+          <b class="transport__route--bold">№ 305К</b>
+          от станции метро «Старая деревня»
+        </p>
+
+        <p class="transport__route">
+          <b class="transport__route--bold">№ 680К</b>
+          от станции метро «Проспект Просвещения»
+        </p>
+
+        <p class="transport__route">
+          <b class="transport__route--bold">№ 400К</b>
+          от станции метро «Площадь Ленина»
+        </p>
+      </section>
+      <section class="transport  location__transport">
+        <span class="sprite-png  sprite-png--electro  transport__icon"></span>
+
+        <h1 class="transport__title">Электропоезд</h1>
+
+        <p class="transport__route">
+            Электропоезд Выборгского направления <br class="transport__route--br">
+            от Финляндского вокзала Санкт-Петербурга <br class="transport__route--br">
+            до платформы «Репино» <br class="transport__route--br">
+        </p>
+      </section>
+    </div>
   </div>
 </div>
 
