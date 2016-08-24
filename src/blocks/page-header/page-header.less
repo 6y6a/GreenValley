@@ -5,40 +5,50 @@
 
 .page-header {
   .container();
-  min-height: 9rem;
-
 
   &__inner {
+    position: relative;
     .row(@xs-grid-gutter: 0;
          @sm-grid-gutter: 0;
          @md-grid-gutter: 0);
     align-items: center;
   }
-  
+
+  &__main-logo {
+    padding: 17px 0 27px;
+    .col(lg, 2);
+  }
+
+  &__main-nav {
+    .col-offset(lg, 1);
+    .col-offset(xl, 0);
+    .col(lg, 5);
+    .col(xl, 4);
+  }
 
   &__contact {
-    .col-offset(lg);
-    .col(lg, 3);
-    .hidden-down(md);
+    .col-offset(xl);
+    .col(xl, 3);
+    .hidden-down(lg);
     font: 14px/1 @font-family--fira;
     color: @gray-darker;
   }
 
   &__phone {
     display: block;
-    font: 18px/1 @font-family--sans;
+    margin-bottom: 15px;
+    font: 18px/1 @font-family--sans-cap;
     color: @gray-darker;
-  }
 
-  &__main-logo {
-    .col(lg, 2);
-  }
-
-  &__main-nav {
-    .col(lg, 4);
+    &:hover {
+      color: @color-main--green-hover;
+      text-decoration: none;
+    }
   }
 
   &__btn {
+    .col-offset(lg, 2);
+    .col-offset(xl, 0);
     .col(lg, 2);
     .hidden-down(md);
   }

@@ -13,6 +13,7 @@
   <div class="page-header__inner">
     <a href="#" class="main-logo  page-header__main-logo"><img src="./img/logo.png" alt="Логотип"></a>
     <nav class="main-nav  page-header__main-nav">
+      <div class="toggler-burger  main-nav__toggler"><span class="toggler-burger__icon"></span></div>
       <ul class="main-nav__list">
         <li class="main-nav__item  main-nav__item--active"><a href="" class="main-nav__link">Номера</a></li>
         <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
@@ -20,7 +21,7 @@
         <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
         <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
       </ul>
-      <div class="main-nav__toggler"><span></span></div>
+
     </nav>
     <div class="page-header__contact">
       <a href="tel:+78127775588" class="page-header__phone">+7 812 777 55 88</a>
@@ -286,7 +287,7 @@
     <h1 class="location__title">Как до нас добраться</h1>
     <div class="location__map" id="map"></div>
     <div class="location__wrapper">
-      <section class="transport  location__transport  location__transport--left">
+      <section class="transport  location__transport  location__transport--offset">
         <span class="sprite-png  sprite-png--auto  transport__icon"></span>
 
         <h1 class="transport__title">Автобусы</h1>
@@ -364,13 +365,13 @@
 
 <footer class="page-footer">
   <div class="page-footer__inner">
-    <div class="page-footer__address">г. Санкт-Петербург</div>
+    <div class="page-footer__address">г. Санкт-Петербург <br> Приморское ш.600</div>
     <div class="page-footer__link">
-      <a href="#" class="main-logo"><img src="" alt="Логотип"></a>
+      <a href="#" class="main-logo"><img src="./img/logo.png" alt="Логотип"></a>
       <ul class="page-footer__list">
-        <li><a href="" class="page-footer__icon icon icon--instagram">vk</a></li>
-        <li><a href="" class="page-footer__icon">vk</a></li>
-        <li><a href="" class="page-footer__icon">vk</a></li>
+        <li><a href="#" class="page-footer__icon icon icon--vk"></a></li>
+        <li><a href="#" class="page-footer__icon icon icon--instagram"></a></li>
+        <li><a href="#" class="page-footer__icon icon icon--facebook"></a></li>
       </ul>
     </div>
     <div class="page-footer__contact">
@@ -380,7 +381,6 @@
   </div>
 </footer>
 
-<span class="icon icon--vk">123 </span>
 
 @@include('_include/page_bottom.html')
 </body>
