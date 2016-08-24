@@ -28,7 +28,7 @@ $(document).ready(function(){
     $preview.trigger('to.owl.carousel', $position);
   });
 
-  // Событие при свайпе превью
+  // Событие при изменении превью
   $preview.on('changed.owl.carousel', function(event){
     $photo.trigger('to.owl.carousel', event.item.index);
   });
