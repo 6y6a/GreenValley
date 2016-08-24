@@ -4,9 +4,13 @@
 
 
 .page-header {
-  .container();
+  border-bottom: 1px solid @gray-light;
 
   &__inner {
+    .container();
+  }
+
+  &__items {
     position: relative;
     .row(@xs-grid-gutter: 0;
          @sm-grid-gutter: 0;
