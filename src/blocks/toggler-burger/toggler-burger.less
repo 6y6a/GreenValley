@@ -8,7 +8,7 @@
   position: absolute;
   z-index: 1;
   top: 32px;
-  right: 0;
+  right: 1px;
   display: flex;
   align-items: center;
   width: 28px;
@@ -20,11 +20,13 @@
     .toggler-burger__icon {
       transition: background 0.2s;
       background: transparent;
+      box-shadow: none;
 
       &:before,
       &:after {
         transition: top 0.2s, transform 0.2s 0.2s;
         top: 0;
+        box-shadow: none;
       }
 
       &:before {
@@ -43,8 +45,10 @@
     width: 100%;
     height: 4px;
     background: @color-main--orange;
-    border-radius: 0.2rem;
+    border-radius: 1px;
     transition: background 0.2s 0.2s;
+    box-shadow: 0px 1px lighten(@color-main--orange, 20%);
+                //0px -1px lighten(@color-main--orange, 20%);
 
     &:before,
     &:after {
@@ -54,17 +58,19 @@
       width: 100%;
       height: 4px;
       background: @color-main--orange;
-      border-radius: 0.2rem;
+      border-radius: 1px;
       transform-origin: 50% 50%;
       transition: top 0.2s 0.2s, transform 0.2s;
     }
 
     &:before {
-      top: 10px;
+      top: 9.5px;
+      box-shadow: 0px -1px lighten(@color-main--orange, 20%);
     }
 
     &:after {
-      top: -10px;
+      top: -9.5px;
+      box-shadow: 0px 1px lighten(@color-main--orange, 20%);
     }
   }
 }
