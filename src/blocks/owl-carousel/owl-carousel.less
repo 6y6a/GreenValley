@@ -14,18 +14,21 @@
 }
 
 .owl-carousel .owl-stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
   position: relative;
   -ms-touch-action: pan-Y;
 }
 
-.owl-carousel .owl-stage:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
+//.owl-carousel .owl-stage:after {
+//  content: ".";
+//  display: block;
+//  clear: both;
+//  visibility: hidden;
+//  line-height: 0;
+//  height: 0;
+//}
 
 .owl-carousel .owl-stage-outer {
   position: relative;
@@ -37,7 +40,8 @@
 .owl-carousel .owl-item {
   position: relative;
   min-height: 1px;
-  float: left;
+  display: flex;
+  //float: left;
   -webkit-backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
