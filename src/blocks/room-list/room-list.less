@@ -4,5 +4,29 @@
 
 
 .room-list {
-  
+
+  &__inner {
+    .container(0);
+
+    @media (min-width: @screen-md) {
+      width: @container-sm;
+      padding-left: @grid-gutter-width;
+      padding-right: @grid-gutter-width;
+    }
+  }
+
+  &__title {
+    margin: 50px 0 34px;
+    font: 30px @font-family--serif-cap;
+    color: #000;
+    text-align: center;
+  }
+
+  &__room {
+    margin-bottom: 50px;
+
+    @media (min-width: @screen-lg) {
+      margin-bottom: 40px;
+    }
+  }
 }
