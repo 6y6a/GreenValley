@@ -3,17 +3,33 @@
 @import '../../less/variables.less';     // только для удобства обращения к переменным
 
 
-.review {
-  position: relative;
-  display: none;
-  padding: 122px 45px 29px;
-  background-color: @color-review;
-  font-family: @font-family--fira;
-  color: @gray-darker;
-  text-align: center;
-  border: 1px solid @color-main--green-hover;
+.review-slider {
+
+  &__item {
+    position: relative;
+    flex-wrap: wrap;
+    display: none;
+    justify-content: center;
+    margin-top: 56px;
+    padding: 122px 40px 29px;
+    background-color: @color-review;
+    font-family: @font-family--fira;
+    font-weight: 400;
+    color: @gray-darker;
+    text-align: center;
+    border: 1px solid @color-main--green-hover;
+
+    &--active {
+      display: flex;
+    }
+
+    @media (min-width: @screen-lg) {
+      display: flex;
+    }
+  }
 
   &__user {
+    z-index: 100000;
     position: absolute;
     margin: 0;
     left: 50%;
@@ -23,13 +39,21 @@
   }
 
   &__img {
+    display: block;
     border: 2px solid @color-review;
   }
 
   &__name {
     margin: 10px 0;
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.2857;
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &__message {
@@ -40,11 +64,8 @@
   }
 
   &__date {
+    align-self: flex-end;
     font-size: 14px;
     line-height: 1.2857;
-  }
-
-  &--active {
-    display: block;
   }
 }

@@ -12,20 +12,69 @@
 
   &__inner {
     .container(0);
+    position: relative;
+    text-align: center;
   }
 
   &__title {
     margin: 0;
-    font: 26px @font-family--serif;
+    font: 26px @font-family--serif-cap;
     color:  #fff;
     text-align: center;
   }
 
-  &__nav {
+  &__left,
+  &__right {
     .hidden-down(md);
+    position: absolute;
+    top: 50%;
+    font-size: 42px;
+    color: #fff;
+    transform: translate(0, -50%);
+
+    &:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: @gray-light;
+      text-decoration: none;
+    }
   }
 
-  &__review {
-    margin-top: 56px;
+  &__left {
+    left: 50px;
+  }
+
+  &__right {
+    right: 50px;
+  }
+
+  &__row {
+    .row(0, 0, 0);
+    justify-content: center;
+  }
+
+  &__review-slider {
+    .col(lg, 10);
+
+    @media (min-width: @screen-md) {
+      width: 62.5%;
+    }
+  }
+
+  &__btn {
+    margin: 39px auto 0;
+    text-align: center;
+  }
+
+  @media (min-width: @screen-md) {
+    background-image: url(../img/feedback-md.jpg);
+  }
+
+  @media (min-width: @screen-lg) {
+    background-image: url(../img/feedback-lg.jpg);
   }
 }
