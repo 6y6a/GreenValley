@@ -4,5 +4,41 @@
 
 
 .banner {
+  background: url(../img/banner-xs.jpg) center bottom no-repeat;
+  background-size: cover;
+  padding: 67px 0 64px;
+
+  &__inner {
+    .container();
+  }
+
+  &__title {
+    margin: 0;
+    font: 30px/1.4 @font-family--serif-cap;
+    color: #fff;
+    text-align: center;
+
+    @media (min-width: @screen-md) {
+      font-size: 36px;
+    }
+  }
+
+  &__description {
+    .hidden-down(sm);
+    margin-top: 34px;
+    font: 18px/1.333333 @font-family--fira;
+    color: #fff;
+    text-align: center;
+  }
+
+  @media (min-width: @screen-md) {
+    background-image: url(../img/banner-md.jpg);
+  }
+
+  @media (min-width: @screen-lg) {
+    background-image: url(../img/banner-lg.jpg);
+  }
+
+
   
 }
