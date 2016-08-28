@@ -12,7 +12,7 @@
 <header class="page-header">
   <div class="page-header__inner">
     <div class="page-header__items">
-      <a href="#" class="main-logo  page-header__main-logo"><img src="./img/logo.png" alt="Логотип"></a>
+      <a href="index.html" class="main-logo  page-header__main-logo"><img src="./img/logo.png" alt="Логотип"></a>
       <nav class="main-nav  page-header__main-nav">
         <div class="toggler-burger  main-nav__toggler"><span class="toggler-burger__icon"></span></div>
         <ul class="main-nav__list">
@@ -33,14 +33,14 @@
     </div>
   </div>
 </header>
-<div class="promo">
-  <ul class="promo__tabs">
-    <li class="promo__tab  promo__tab--active"><a class="promo__link  promo__link--active" href="#family">Семейный отдых</a></li>
-    <li class="promo__tab"><a class="promo__link" href="#enterprise">Корпоративный</a></li>
+<div class="promo" id="promo">
+  <ul class="promo__tabs" data-tab="tabs">
+    <li class="promo__tab  promo__tab--active" data-tab="1"><a class="promo__link  promo__link--active" href="#family">Семейный отдых</a></li>
+    <li class="promo__tab" data-tab="2"><a class="promo__link" href="#enterprise">Корпоративный</a></li>
   </ul>
 
-  <div class="vacation-slider  promo__vacation-slider">
-    <section class="vacation-slider__slide  vacation-slider__slide--active" id="family" style="">
+  <div class="vacation-slider  promo__vacation-slider" data-toggle="toggler">
+    <section class="vacation-slider__slide" data-toggle="1" id="family" style="">
       <picture>
         <source srcset="./img/vacation-slide-lg-1.jpg" media="(min-width: 1200px)">
         <source srcset="./img/vacation-slide-sm-1.jpg" media="(min-width: 768px)">
@@ -60,25 +60,31 @@
         </p>
       </div>
     </section>
-    <section class="vacation-slider__slide" id="enterprise" style="">
+    <section class="vacation-slider__slide" data-toggle="2" id="enterprise" style="">
       <picture>
         <source srcset="./img/vacation-slide-lg-2.jpg" media="(min-width: 1200px)">
         <source srcset="./img/vacation-slide-sm-2.jpg" media="(min-width: 768px)">
         <img srcset="./img/vacation-slide-xs-2.jpg" alt="слайд-2" class="vacation-slider__image">
       </picture>
-      <div class="vacation-slider__inner">
-        <div class="vacation-slider__inner">
-          <h1 class="vacation-slider__title">Корпоративный отдых на берегу Финского залива</h1>
 
-          <p class="vacation-slider__description">Green Valley - это специальные предложения
-          для отдыха сотрудников компаний.</p>
-        </div>
+      <div class="vacation-slider__inner">
+        <h1 class="vacation-slider__title">
+          <span class="vacation-slider__splitter">Корпоративный отдых на берегу</span>
+          <span class="vacation-slider__new-line"></span>
+          <span class="vacation-slider__splitter">Финского залива</span>
+        </h1>
+
+        <p class="vacation-slider__description">
+          <span class="vacation-slider__splitter">Green Valley - это специальные предложения</span>
+          <span class="vacation-slider__new-line"></span>
+          <span class="vacation-slider__splitter">для отдыха сотрудников компаний.</span>
+        </p>
       </div>
     </section>
   </div>
 
-  <div class="vacation-type  promo__vacation-type">
-    <div class="vacation-type__inner  vacation-type__inner--active" >
+  <div class="vacation-type  promo__vacation-type" data-toggle="toggler">
+    <div class="vacation-type__inner" data-toggle="1">
       <section class="vacation-type__slide">
         <h1 class="vacation-type__title">Здоровый отдых</h1>
 
@@ -113,7 +119,7 @@
       </section>
     </div>
 
-    <div class="vacation-type__inner" >
+    <div class="vacation-type__inner" data-toggle="2">
       <section class="vacation-type__slide">
         <h1 class="vacation-type__title">Здоровый отдых</h1>
 
@@ -216,15 +222,15 @@
   </div>
 </div>
 
-<div class="feedback">
+<div class="feedback" id="feedback">
   <div class="feedback__inner">
-      <h1 class="feedback__title">Отзывы</h1>
-      <ul class="feedback__nav">
-        <li><a href="" class="feedback__left">Влево</a></li>
-        <li><a href="" class="feedback__right">Вправо</a></li>
-      </ul>
+    <h1 class="feedback__title">Отзывы</h1>
 
-      <div class="review-slider  feedback__review-slider">
+    <div><a href="" class="icon  icon--angle-left  feedback__left"></a></div>
+    <div><a href="" class="icon  icon--angle-right  feedback__right"></a></div>
+
+    <div class="feedback__row">
+      <div class="review-slider  feedback__review-slider owl-carousel" id="review-slider">
         <section class="review-slider__item  review-slider__item--active">
           <figure class="review-slider__user">
             <img class="review-slider__img" src="./img/user-1.jpg" alt="Посетитель №1">
@@ -236,7 +242,28 @@
             Стали постоянными гостями!</p>
           <span class="review-slider__date">Дата отдыха: <br> 01.06.2015 - 08.06.2015</span>
         </section>
-        <section class="review-slider__item  review-slider__item--active">
+        <section class="review-slider__item">
+          <figure class="review-slider__user">
+            <img class="review-slider__img" src="./img/user-2.jpg" alt="Посетитель №2">
+            <figcaption class="review-slider__name">Екатерина В.</figcaption>
+            <a href="" class="review-slider__link"><span class="icon icon--facebook"></span></a>
+          </figure>
+          <p class="review-slider__message">Спасибо всем без исключения сотрудникам отеля за прекрасные дни,
+            проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.</p>
+          <span class="review-slider__date">Дата отдыха: <br> 15.05.2015 - 20.05.2015</span>
+        </section>
+        <section class="review-slider__item">
+          <figure class="review-slider__user">
+            <img class="review-slider__img" src="./img/user-1.jpg" alt="Посетитель №1">
+            <figcaption class="review-slider__name">Екатерина В.</figcaption>
+            <a href="#" class="review-slider__link"><span class="icon icon--vk"></span></a>
+          </figure>
+          <p class="review-slider__message">Наша семья счастлива, что открыла для себя Green Valley.
+            Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда.
+            Стали постоянными гостями!</p>
+          <span class="review-slider__date">Дата отдыха: <br> 01.06.2015 - 08.06.2015</span>
+        </section>
+        <section class="review-slider__item">
           <figure class="review-slider__user">
             <img class="review-slider__img" src="./img/user-2.jpg" alt="Посетитель №2">
             <figcaption class="review-slider__name">Екатерина В.</figcaption>
@@ -247,7 +274,9 @@
           <span class="review-slider__date">Дата отдыха: <br> 15.05.2015 - 20.05.2015</span>
         </section>
       </div>
-      <a href="" class="btn  btn--white  feedback__btn">Все отзывы</a>
+    </div>
+
+    <a href="" class="btn  btn--white  feedback__btn">Все отзывы</a>
   </div>
 </div>
 
