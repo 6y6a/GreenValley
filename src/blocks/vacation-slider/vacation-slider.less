@@ -4,10 +4,16 @@
 
 
 .vacation-slider {
+  overflow: hidden;
+  height: 321px;
+
+
+  @media (min-width: @screen-lg) {
+    height: 431px;
+  }
 
   &__slide {
     position: relative;
-    overflow: hidden;
     padding-top: 19px;
     min-height: 321px;
 

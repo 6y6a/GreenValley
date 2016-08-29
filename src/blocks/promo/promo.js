@@ -6,7 +6,9 @@ $(document).ready(function(){
   var $toggle = $toggles.children();
   var position;
 
-  showActive();
+  $toggle.hide();
+  position = $tab.has('[class$=--active]').data('tab');
+  $toggle.filter('[data-toggle=' + position + ']').show();
 
   $tab.on('click', function(event){
     event.preventDefault();
@@ -23,7 +25,6 @@ $(document).ready(function(){
   function showActive() {
     $toggle.hide();
     position = $tab.has('[class$=--active]').data('tab');
-    console.log(position);
     $toggle.filter('[data-toggle=' + position + ']').fadeIn();
   }
 
