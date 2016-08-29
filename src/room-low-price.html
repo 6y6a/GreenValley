@@ -117,34 +117,40 @@
   </div>
 </div>
 
-<div class="room-list">
-  <div class="room-list__inner">
-    <ul class="room-list__dots">
-      <li><a href="" class="room-list__dot">1</a></li>
-      <li><a href="" class="room-list__dot">2</a></li>
-    </ul>
-    <div class="place">
-      <a href="" class="place__item">
-        <span class="place__img" style="background-image: url('');"></span>
 
-        <h2 class="place__title">Стандарт</h2>
-
-        <p class="place__description">от <b>4000</b> рублей</p>
-      </a>
-      <a href="" class="place__item">
-        <span class="place__img" style="background-image: url('');"></span>
-
-        <h2 class="place__title">Стандарт</h2>
-
-        <p class="place__description">от <b>4000</b> рублей</p>
-      </a>
-      <a href="" class="place__item">
-        <span class="place__img" style="background-image: url('');"></span>
-
-        <h2 class="place__title">Стандарт</h2>
-
-        <p class="place__description">от <b>4000</b> рублей</p>
-      </a>
+<div class="room-selection">
+  <div class="room-selection__inner">
+    <div class="room-selection__wrapper owl-carousel" id="place-carousel">
+      <div class="room-selection__place">
+        <a href="#" class="place  place--active">
+          <picture class="place__img">
+            <source srcset="./img/standart-md.jpg" media="(min-width: 768px)">
+            <img srcset="./img/standart-xs.jpg" alt="Отель">
+          </picture>
+          <h2 class="place__title">Стандарт</h2>
+          <p class="place__description">от <b class="place__description place__description--bold">4000</b> руб./сутки</p>
+        </a>
+      </div>
+      <div class="room-selection__place">
+        <a href="#" class="place  place--active">
+          <picture class="place__img">
+            <source srcset="./img/standart-plus-md.jpg" media="(min-width: 768px)">
+            <img srcset="./img/standart-plus-xs.jpg" alt="Отель">
+          </picture>
+          <h2 class="place__title">Стандарт+</h2>
+          <p class="place__description">от <b class="place__description place__description--bold">4500</b> руб./сутки</p>
+        </a>
+      </div>
+      <div class="room-selection__place">
+        <a href="#" class="place">
+          <picture class="place__img">
+            <source srcset="./img/lux-md.jpg" media="(min-width: 768px)">
+            <img srcset="./img/lux-xs.jpg" alt="Отель">
+          </picture>
+          <h2 class="place__title">Люкс</h2>
+          <p class="place__description">от <b class="place__description place__description--bold">5700</b> руб./сутки</p>
+        </a>
+      </div>
     </div>
   </div>
 </div>
