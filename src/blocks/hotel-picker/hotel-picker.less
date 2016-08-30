@@ -4,5 +4,58 @@
 
 
 .hotel-picker {
-  
+  display: block;
+  padding: 16px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  &__item {
+    display: none;
+  }
+
+  &__name {
+    font: 500 14px/1 @font-family--fira;
+    color: @gray-darker;
+
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: ~'calc(50% - 70px)';
+    transform: translate(0, -50% - 10px);
+    font-size: 18px;
+    color: @color-main--green;
+
+    @media (min-width: @screen-md) {
+      left: 50%;
+      transform: translate(-50%, 18px);
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 88px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background-color: @gray-light;
+  }
+
+  &:before {
+    content: '▲';
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-shadow: 0 -1px @gray-light;
+  }
+
+
 }
