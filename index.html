@@ -58,7 +58,7 @@
       <nav class="main-nav  page-header__main-nav">
         <div class="toggler-burger  main-nav__toggler"><span class="toggler-burger__icon"></span></div>
         <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active"><a href="" class="main-nav__link">Номера</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a href="room-list.html" class="main-nav__link">Номера</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
@@ -264,15 +264,15 @@
   </div>
 </div>
 
-<div class="feedback">
+<div class="feedback" id="feedback">
   <div class="feedback__inner">
-      <h1 class="feedback__title">Отзывы</h1>
-      <ul class="feedback__nav">
-        <li><a href="" class="feedback__left">Влево</a></li>
-        <li><a href="" class="feedback__right">Вправо</a></li>
-      </ul>
+    <h1 class="feedback__title">Отзывы</h1>
 
-      <div class="review-slider  feedback__review-slider">
+    <div><a href="" class="icon  icon--angle-left  feedback__left"></a></div>
+    <div><a href="" class="icon  icon--angle-right  feedback__right"></a></div>
+
+    <div class="feedback__row">
+      <div class="review-slider  feedback__review-slider owl-carousel" id="review-slider">
         <section class="review-slider__item  review-slider__item--active">
           <figure class="review-slider__user">
             <img class="review-slider__img" src="./img/user-1.jpg" alt="Посетитель №1">
@@ -284,7 +284,28 @@
             Стали постоянными гостями!</p>
           <span class="review-slider__date">Дата отдыха: <br> 01.06.2015 - 08.06.2015</span>
         </section>
-        <section class="review-slider__item  review-slider__item--active">
+        <section class="review-slider__item">
+          <figure class="review-slider__user">
+            <img class="review-slider__img" src="./img/user-2.jpg" alt="Посетитель №2">
+            <figcaption class="review-slider__name">Екатерина В.</figcaption>
+            <a href="" class="review-slider__link"><span class="icon icon--facebook"></span></a>
+          </figure>
+          <p class="review-slider__message">Спасибо всем без исключения сотрудникам отеля за прекрасные дни,
+            проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.</p>
+          <span class="review-slider__date">Дата отдыха: <br> 15.05.2015 - 20.05.2015</span>
+        </section>
+        <section class="review-slider__item">
+          <figure class="review-slider__user">
+            <img class="review-slider__img" src="./img/user-1.jpg" alt="Посетитель №1">
+            <figcaption class="review-slider__name">Екатерина В.</figcaption>
+            <a href="#" class="review-slider__link"><span class="icon icon--vk"></span></a>
+          </figure>
+          <p class="review-slider__message">Наша семья счастлива, что открыла для себя Green Valley.
+            Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда.
+            Стали постоянными гостями!</p>
+          <span class="review-slider__date">Дата отдыха: <br> 01.06.2015 - 08.06.2015</span>
+        </section>
+        <section class="review-slider__item">
           <figure class="review-slider__user">
             <img class="review-slider__img" src="./img/user-2.jpg" alt="Посетитель №2">
             <figcaption class="review-slider__name">Екатерина В.</figcaption>
@@ -295,7 +316,9 @@
           <span class="review-slider__date">Дата отдыха: <br> 15.05.2015 - 20.05.2015</span>
         </section>
       </div>
-      <a href="" class="btn  btn--white  feedback__btn">Все отзывы</a>
+    </div>
+
+    <a href="" class="btn  btn--white  feedback__btn">Все отзывы</a>
   </div>
 </div>
 
@@ -382,7 +405,7 @@
 
     <div class="selection__wrapper">
       <div class="selection__place  selection__place--offset">
-        <a href="#" class="place">
+        <a href="#" class="place  place--active">
           <picture class="place__img">
             <source srcset="./img/place-hotel-lg.jpg" media="(min-width: 1200px)">
             <source srcset="./img/place-hotel-sm.jpg" media="(min-width: 768px)">
@@ -395,7 +418,7 @@
          </a>
       </div>
       <div class="selection__place">
-        <a href="#" class="place">
+        <a href="#" class="place  place--active">
           <picture class="place__img">
             <source srcset="./img/place-cotage-lg.jpg" media="(min-width: 1200px)">
             <source srcset="./img/place-cotage-sm.jpg" media="(min-width: 768px)">
