@@ -19,8 +19,13 @@
   }
 
   &__main-logo {
+    margin: 0 50px;
     padding: 16px 0 25px;
     .col(lg, 2);
+
+    @media (min-width: @screen-lg) {
+      margin: 0;
+    }
   }
 
   &__main-nav {
