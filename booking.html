@@ -88,7 +88,7 @@
     </div>
   </div>
 
-  <form action="" class="booking__payment-form">
+  <form action="" class="booking__payment-form" id="booking-form">
     <div class="booking__step  booking__step--gray">
       <div class="booking__inner">
         <h2 class="booking__step-subtitle">Шаг 1</h2>
@@ -102,17 +102,16 @@
 
               <div class="date-picker__date">
                 <label class="date-picker__tip" for="date-picker__arrive-day"> День </label>
-                <input type="text" class="date-picker__item" name="date-picker__arrive-day" value=""
-                       id="date-picker__arrive-day" maxlength="2" size="2" placeholder="дд" readonly>
+                <input type="text" class="date-picker__item" name="date-picker__arrive-day"
+                       id="date-picker__arrive-day" maxlength="2" size="2" placeholder="дд">
 
                 <label class="date-picker__tip" for="date-picker__arrive-month"> Месяц </label>
-                <input type="text" class="date-picker__item" name="date-picker__arrive-month" value=""
-                       id="date-picker__arrive-month" maxlength="2" size="2" placeholder="мм" readonly>
+                <input type="text" class="date-picker__item" name="date-picker__arrive-month"
+                       id="date-picker__arrive-month" maxlength="2" size="2" placeholder="мм">
 
                 <label class="date-picker__tip" for="date-picker__arrive-year"> Год </label>
                 <input type="text" class="date-picker__item  date-picker__item--big" name="date-picker__arrive-year"
-                       value=""
-                       id="date-picker__arrive-year" maxlength="4" size="4" placeholder="гггг" readonly>
+                       id="date-picker__arrive-year" maxlength="4" size="4" placeholder="гггг">
               </div>
             </div>
 
@@ -122,15 +121,15 @@
               <div class="date-picker__date">
                 <label class="date-picker__tip" for="date-picker__leave-day"> День </label>
                 <input type="text" class="date-picker__item" name="date-picker__day" value=""
-                       id="date-picker__leave-day" maxlength="2" size="2" placeholder="дд" readonly>
+                       id="date-picker__leave-day" maxlength="2" size="2" placeholder="дд">
 
                 <label class="date-picker__tip" for="date-picker__leave-month"> Месяц </label>
                 <input type="text" class="date-picker__item" name="date-picker__month" value=""
-                       id="date-picker__leave-month" maxlength="2" size="2" placeholder="мм" readonly>
+                       id="date-picker__leave-month" maxlength="2" size="2" placeholder="мм">
 
                 <label class="date-picker__tip" for="date-picker__leave-year"> Год </label>
                 <input type="text" class="date-picker__item  date-picker__item--big" name="date-picker__year" value=""
-                       id="date-picker__leave-year" maxlength="4" size="4" placeholder="гггг" readonly>
+                       id="date-picker__leave-year" maxlength="4" size="4" placeholder="гггг">
               </div>
             </div>
           </div> <!--booking__date-picker-items-->
@@ -199,28 +198,28 @@
 
         <div class="booking__hotel-description-wrapper">
           <div class="booking__hotel-description-list">
-              <ul class="hotel-description">
-                <li class="hotel-description__item">
-                  <div class="sprite-png  sprite-png--rule  hotel-description__icon"></div>
-                  <span>Площадь 100M<sup>2</sup></span>
-                </li>
-                <li class="hotel-description__item">
-                  <div class="sprite-png  sprite-png--door  hotel-description__icon"></div>
-                  3 комнаты
-                </li>
-                <li class="hotel-description__item">
-                  <div class="sprite-png  sprite-png--bed  hotel-description__icon"></div>
-                  5 спальных мест
-                </li>
-                <li class="hotel-description__item">
-                  <div class="sprite-png  sprite-png--bath  hotel-description__icon"></div>
-                  Раздельный санузел
-                </li>
-                <li class="hotel-description__item">
-                  <div class="sprite-png  sprite-png--wifi  hotel-description__icon"></div>
-                  WI-FI
-                </li>
-              </ul>
+            <ul class="hotel-description">
+              <li class="hotel-description__item">
+                <div class="sprite-png  sprite-png--rule  hotel-description__icon"></div>
+                <span>Площадь 100M<sup>2</sup></span>
+              </li>
+              <li class="hotel-description__item">
+                <div class="sprite-png  sprite-png--door  hotel-description__icon"></div>
+                3 комнаты
+              </li>
+              <li class="hotel-description__item">
+                <div class="sprite-png  sprite-png--bed  hotel-description__icon"></div>
+                5 спальных мест
+              </li>
+              <li class="hotel-description__item">
+                <div class="sprite-png  sprite-png--bath  hotel-description__icon"></div>
+                Раздельный санузел
+              </li>
+              <li class="hotel-description__item">
+                <div class="sprite-png  sprite-png--wifi  hotel-description__icon"></div>
+                WI-FI
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -272,64 +271,85 @@
 
         <h1 class="booking__step-title">Способ оплаты</h1>
 
-        <label class="payment  booking__payment-item">
-          <span class="icon  icon--check  payment__icon"></span>
-          <input type="radio" class="payment__item" name="payment__item" value="">
-          <span class="payment__name">По приезду</span>
-          <span class="payment__hint">Вы можете ...</span>
-        </label>
+        <div class="booking__payment-list">
+          <div class="booking__payment-list-item">
+            <label class="payment  booking__payment-item">
+              <span class="icon  icon--check  payment__icon"></span>
+              <input type="radio" class="payment__radio" name="payment__item" value="">
+              <span class="payment__wrapper">
+                <span class="payment__name">По приезду</span>
+                <span class="payment__hint">Вы можете произвести оплату по факту заселения.</span>
+              </span>
+            </label>
 
-        <label class="payment  booking__payment-item">
-          <span class="icon  icon--check  payment__icon  payment__icon--active"></span>
-          <input type="radio" class="payment__item" name="payment__item" value="">
-          <span class="payment__name">Сейчас</span>
-          <span class="payment__hint">Вы можете ...</span>
+            <label class="payment  booking__payment-item  booking__payment-item--last">
+              <span class="icon  icon--check  payment__icon  payment__icon--active"></span>
+              <input type="radio" class="payment__radio" name="payment__item" value="">
+              <span class="payment__wrapper">
+                <span class="payment__name">Сейчас</span>
+                <span class="payment__hint">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</span>
+              </span>
 
-          <label class="payment__bank-card">
-            <span class="payment__description">Номер карты</span>
-            <input type="text" name="payment__number" placeholder="0000-0000-0000-0000">
-          </label>
+              <span class="payment__wrapper">
+                <span class="payment__bank-card-wrapper">
+                  <label class="payment__bank-card">
+                    <span class="payment__description">Номер карты</span>
+                    <input type="text" class="payment__form" name="payment__number"
+                           placeholder="0000-0000-0000-0000">
+                  </label>
 
-          <label class="payment__bank-card">
-            <span class="payment__description">Фамилия владельца карты</span>
-            <input type="text" name="payment__owner" placeholder="Vladimir Vladimirov">
-          </label>
+                  <label class="payment__bank-card">
+                    <span class="payment__description">Фамилия владельца карты</span>
+                    <input type="text" class="payment__form" name="payment__owner"
+                           placeholder="Vladimir Vladimirov">
+                  </label>
+                </span>
 
-          <label class="payment__bank-card  payment__bank-card--small">
-            <span class="payment__description">Код CvV</span>
-            <input type="text" name="payment__cvv" placeholder="123">
-          </label>
+                <span class="payment__bank-card-wrapper  payment__bank-card-wrapper--small">
+                  <label class="payment__bank-card">
+                    <span class="payment__description">Код CvV</span>
+                    <input type="text" class="payment__form  payment__form--small" name="payment__cvv"
+                           placeholder="123">
+                  </label>
 
-          <label class="payment__bank-card  payment__bank-card--small">
-            <span class="payment__description">действует до</span>
-            <input type="text" name="payment__valid" placeholder="01 / 2018">
-          </label>
-        </label>
+                  <label class="payment__bank-card">
+                    <span class="payment__description">действует до</span>
+                    <input type="text" class="payment__form  payment__form--small" name="payment__valid"
+                           placeholder="01 / 2018">
+                  </label>
+                </span>
+              </span>
+            </label>
+          </div>
 
-        <div class="result">
-          <h1 class="result__title">К оплате</h1>
+          <div class="booking__result-list-item">
+            <div class="result  booking__result">
+              <h1 class="result__title">К оплате</h1>
 
-          <p class="result__price">-</p>
+              <p class="result__price">-</p>
 
-          <p class="result__help">
-            <span class="result__icon"></span>
-            Пожалуйста,
-            <a href="" class="result__link">выберите дату</a>
-            ...
-          </p>
+              <p class="result__help">
+                <span class="icon  icon--exclamation-circle  result__icon"></span>
+                Пожалуйста,
+                <a href="" class="result__link" id="error-link">выберите дату</a>
+                <span>въезда и выезда</span>, чтобы увидеть сумму к оплате
+              </p>
+            </div>
+          </div>
         </div>
 
-        <button class="btn  btn--square" type="submit">Забронировать</button>
+        <div class="booking__btn-wrapper">
+          <div class="booking__btn">
+            <button class="btn  btn--green" type="button" id="btn">Забронировать</button>
+          </div>
+        </div>
+
+
       </div> <!--booking__inner-->
     </div> <!--booking__step-->
 
   </form> <!--booking__payment-form-->
 </div>
-
-
-
-
-
 
 
 <footer class="page-footer">
