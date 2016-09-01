@@ -33,10 +33,6 @@
   @media (min-width: @screen-xl) {
     width: @container-xl;
   }
-
-  @media (min-width: @screen-xxl) {
-    width: @container-xxl;
-  }
 }
 
 
@@ -70,13 +66,6 @@
     margin-right: (@xs-grid-gutter / -2);
   }
 
-  // Если первая переданная переменная не ноль — выводим padding-и по умолчанию для прямых потомков
-  & when not (@xs-grid-gutter = 0) {
-    & > * {
-      padding-left:  (@grid-gutter-width / 2);
-      padding-right: (@grid-gutter-width / 2);
-    }
-  }
 
   & when not (@sm-grid-gutter = @xs-grid-gutter) {
     @media (min-width: @screen-sm) {
