@@ -23,8 +23,13 @@
       display: flex;
     }
 
+    @media (min-width: @screen-md){
+      padding-bottom: 25px;
+    }
+
     @media (min-width: @screen-lg) {
       display: flex;
+      margin-top: 44px;
     }
   }
 
@@ -41,7 +46,7 @@
   &__img {
     display: block;
     margin: 0 auto;
-    width: 82px;
+    width: 82px !important;
     border: 2px solid @color-review;
   }
 
@@ -56,6 +61,12 @@
   &__link {
     &:hover {
       text-decoration: none;
+    }
+
+    @media (min-width: @screen-lg) {
+      .icon {
+        font-size: 18px;
+      }
     }
   }
 

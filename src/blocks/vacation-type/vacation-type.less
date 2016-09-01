@@ -11,8 +11,8 @@
   }
 
   &__slide {
-    .col(lg, 8);
-    .col-offset(lg, 2);
+    .col(xl, 8);
+    .col-offset(xl, 2);
     min-height: 345px;
     padding-top: 49px;
     padding-bottom: 49px;
@@ -22,7 +22,11 @@
     @media (min-width: @screen-md) {
       background-image: url(../img/vacation-type-sm-1.jpg);
       background-size: contain;
+      padding-bottom: 43px;
+    }
 
+    @media (min-width: @screen-xl) {
+      padding: 49px 0 84px;
     }
   }
 
@@ -34,8 +38,13 @@
     text-align: center;
     letter-spacing: 1.4px;
 
+    @media (min-width: @screen-md) {
+      letter-spacing: 2px;
+    }
+
     @media (min-width: @screen-lg) {
       font-size: 30px;
+      margin-bottom: 25px;
     }
   }
 
@@ -48,6 +57,7 @@
 
     @media (min-width: @screen-md) {
       padding: 0 70px;
+      letter-spacing: 0.5px;
     }
   }
 
@@ -70,11 +80,12 @@
   &__item {
     .col(md, 1, 4, 2rem);
     .col(lg, 1, 6, 2rem);
-    margin: 27px 0 0 0;
+    margin: 24px 0 0 0;
     font: 500 14px/1.28571 @font-family--fira;
     color: @gray-darker;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 0.5px;
   }
 
   &__img {

@@ -45,6 +45,9 @@
   -webkit-backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+  picture {
+    width: 100%;
+  }
 }
 
 .owl-carousel .owl-item img {
@@ -235,11 +238,36 @@
 
   @media (min-width: @screen-md) {
     display: block !important;
+    min-height: 75px;
+
+    .owl-item,
+    .owl-stage
+    .owl-stage-outer {
+      height: 75px;
+    }
+
+    .owl-item picture,
+    .owl-item img {
+      height: 100%;
+    }
+
+
+  }
+
+  @media (min-width: @screen-lg) {
+    min-height: 115px;
+
+    .owl-item,
+    .owl-stage
+    .owl-stage-outer {
+      height: 115px;
+    }
+
   }
 }
 
 .owl-dots {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   margin: 10px 0 30px;
   padding: 0;
@@ -265,6 +293,7 @@
 .owl-carousel {
   &__slide {
     position: relative;
+    width: 100%;
   }
 
   &__description {

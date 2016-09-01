@@ -6,6 +6,14 @@
 
   &__inner {
     .container(0);
-    padding-bottom: 10px;
+    padding-bottom: 50px;
+
+    @media (min-width: @screen-md) {
+      padding-bottom: 49px;
+    }
+
+    @media (min-width: @screen-lg) {
+      padding-bottom: 39px;
+    }
   }
 }
