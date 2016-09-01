@@ -5,23 +5,29 @@
 
 .room {
   position: relative;
-  padding-bottom: 37px;
+  padding-bottom: 14px;
   background: @gray-lighter;
   border: 1px solid @gray-light;
 
   &__title {
-    margin: 40px 0 28px;
+    margin: 33px 0 19px;
     font: 26px/1 @font-family--serif-cap;
     color: @gray-darker;
     text-align: center;
+
+    @media (min-width: @screen-md) {
+      margin: 33px 0 25px;
+    }
   }
 
   &__subtitle {
     font: 500 14px @font-family--fira;
+    text-transform: uppercase
   }
 
   &__price {
     font-size: 18px;
+    font-weight: 400;
     color: @color-main--orange;
   }
 
@@ -36,7 +42,7 @@
       top: 0;
       right: 0;
       height: 100%;
-      width: 50%;
+      width: 49.152542%;
 
     }
   }
@@ -45,6 +51,7 @@
     @media (min-width: @screen-md) {
       max-width: 79.6703296%;
       margin: 0 auto;
+      width: 100%;
     }
 
     @media (min-width: @screen-lg) {
@@ -55,20 +62,19 @@
 
   &__description {
     margin: 0;
-    padding: 40px 20px;
+    padding: 40px 20px 31px;
     font: 16px/1.375 @font-family--fira;
     color: @gray-darker;
 
     @media (min-width: @screen-md) {
       margin: 0 auto;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 10px;
+      padding-right: 10px;
       width: 54.9450549%;
     }
 
     @media (min-width: @screen-lg) {
-      padding-top: 0;
-      padding-left: 10px;
+      padding: 0 10px 34px;
       width: 64.7359454%;
     }
   }
@@ -91,13 +97,17 @@
   }
 
   &__btn {
-    margin-bottom: 26px;
+    margin-bottom: 22px;
     text-align: center;
 
     @media (min-width: @screen-md) {
       margin-bottom: 0;
       width: 100%;
     }
+  }
+
+  @media (min-width: @screen-md) {
+    padding-bottom: 41px;
   }
 
   @media (min-width: @screen-lg) {
