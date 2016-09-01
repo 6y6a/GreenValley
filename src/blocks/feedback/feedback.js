@@ -6,85 +6,123 @@ $(document).ready(function () {
   var $slides = $owl.find('.review-slider__item');
   var $leftOwl = $container.find('.feedback__left');
   var $rightOwl = $container.find('.feedback__right');
-  var $btn = $container.find('.btn');
-  var openClick = 0;
+  var $openBtn = $container.find('.feedback__btn');
+  var $closeBtn = $container.find('.feedback__btn-close');
+
 
   $body.css('overflow', 'hidden');
-  if ($window.width() >= 768){
+  if ($window.width() >= 1200) {
+    initCarousel($owl);
+  }
+  else if ($window.width() >= 768){
     $slides.eq(1).addClass('review-slider__item--active');
   }
   $body.css('overflow', 'auto');
 
 
-  $btn.on('click', function (event) {
-    event.preventDefault();
-
-    $body.css('overflow', 'hidden');
-    if ($window.width() >=992) {
-      return;
-    }
-    else if ($window.width() >= 768) {
-      if (openClick === 0) {
-        reviewSlideToggle(2, true);
-      }
-      else {
-        reviewSlideToggle(2, false);
-      }
-    }
-    else if ($window.width() >= 0) {
-      if (openClick === 0) {
-        reviewSlideToggle(1, true);
-      }
-      else {
-        reviewSlideToggle(1, false);
-      }
-    }
-    $body.css('overflow', 'auto');
-
-    openClick = (openClick === 0) ? 1 : 0;
-  });
-
   $window.resize(function() {
     $body.css('overflow', 'hidden');
 
-    if (openClick === 0) {
+    if ($openBtn.is(':visible')) {
       $slides.removeAttr('style');
     }
-    if ($window.width() >= 768){
-      $slides.eq(1).addClass('review-slider__item--active');
 
+    if ($window.width() >= 1200) {
+      initCarousel($owl);
     }
-    else {
-      if (openClick === 0) {
+    else if ($window.width() >= 768) {
+      destroy($owl);
+      $slides.eq(1).addClass('review-slider__item--active');
+    }
+    else if ($window.width() > 0) {
+
+      if ($openBtn.is(':visible')) {
         $slides.eq(1).removeClass('review-slider__item--active');
       }
     }
     $body.css('overflow', 'auto');
   });
 
+  $openBtn.on('click', function (e) {
+    e.preventDefault();
 
-  // Убрать или показать (n - num) отзывов с конца
-  function reviewSlideToggle(num, show) {
-    if (show === true) {
-      $slides.not(':lt(' + num + ')').slideDown().addClass('review-slider__item--active');
-      $btn.text('Свернуть');
+    $body.css('overflow', 'hidden');
+    if ($window.width() >= 1200) {
+      destroy($owl);
+      $slides.hide();
+      $leftOwl.hide();
+      $rightOwl.hide();
+      var i = 0;
+      var timer = setInterval(function() {
+        $slides.eq(i).fadeIn();
+        i++;
+      }, 300);
+      setTimeout(function(){
+        clearInterval(timer)
+      }, 5000);
     }
-    else {
-      $slides.not(':lt(' + num + ')').slideUp().removeClass('review-slider__item--active');
-      $btn.text('Все отзывы');
+    else if ($window.width() >= 768) {
+      $slides.not(':lt(2)').slideDown().addClass('review-slider__item--active');
     }
-  }
+    else if ($window.width() >= 0) {
+      $slides.not(':lt(1)').slideDown().addClass('review-slider__item--active');
+    }
+    $body.css('overflow', 'auto');
+
+    $(this).hide();
+    $closeBtn.show();
+
+  });
+
+  $closeBtn.hide();
+
+  $closeBtn.on('click', function (e) {
+    e.preventDefault();
+
+    $body.css('overflow', 'hidden');
+    if ($window.width() >= 1200) {
+      initCarousel($owl);
+      $leftOwl.show();
+      $rightOwl.show();
+      $window.scrollTop($container.position().top);
+    }
+    else if ($window.width() >= 768) {
+      $slides.not(':lt(2)').slideUp().removeClass('review-slider__item--active');
+    }
+    else if ($window.width() >= 0) {
+      $slides.not(':lt(1)').slideUp().removeClass('review-slider__item--active');
+    }
+    $body.css('overflow', 'auto');
+
+    $(this).hide();
+    $openBtn.show();
+
+  });
 
   $leftOwl.on('click', function (event) {
     event.preventDefault();
     $owl.trigger('prev.owl.carousel');
-
   });
 
   $rightOwl.on('click', function (event) {
     event.preventDefault();
     $owl.trigger('next.owl.carousel');
-
   });
 
+  function destroy(carouselItem){
+    carouselItem.trigger('destroy.owl.carousel')
+  }
+
+  function initCarousel(carouselItem) {
+    carouselItem.owlCarousel({
+      items: 2,
+      loop: true,
+      dots: false,
+      margin: 20,
+      smartSpeed: 200,
+      fluidSpeed: 200,
+      navSpeed: 0,
+      slideBy: 2
+    });
+  }
 });
