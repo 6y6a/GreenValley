@@ -174,6 +174,7 @@ gulp.task('png', function (callback) {
       .pipe(spritesmith({
         imgName: 'sprite-png.png',
         cssName: 'sprite-png.css',
+        padding: 5,
         cssOpts: {
           cssSelector: function(sprite) { return '.sprite-png--' + sprite.name}}
       }));

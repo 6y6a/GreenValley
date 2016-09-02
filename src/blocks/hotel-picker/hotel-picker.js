@@ -1,33 +1,43 @@
 $(document).ready(function(){
   var $window = $(window);
   var $body = $('body');
-  var $container = $('#hotel-picker');
-  var $tabs = $container.find('input[type=radio]');
-  var $toggles = $('#hotel-description').find('.hotel-description');
+  var $hotel = $('#hotel-picker');
+  var $cottage = $('#cottage-picker');
+  var $tabHotel = $hotel.find('input[type=radio]');
+  var $tabCottage = $cottage.find('input[type=radio]');
+  var $toggleHottel = $('#hotel-description').find('.hotel-description');
+  var $toggleCottage = $('#cottage-description').find('.hotel-description');
   var position;
 
-  showActive();
+  showActive($tabHotel, $toggleHottel);
+  showActive($tabCottage, $toggleCottage);
 
-  $tabs.on('click', function(){
-    showActive();
+  $tabHotel.on('click', function(){
+    showActive($tabHotel, $toggleHottel);
   });
+
+  $tabCottage.on('click', function(){
+    showActive($tabCottage, $toggleCottage);
+  });
+
 
   $window.on('resize', function () {
-    showActive()
+    showActive($tabHotel, $toggleHottel);
+    showActive($tabCottage, $toggleCottage);
   });
 
-  function showActive() {
+  function showActive(tab, item) {
 
     $body.css('hidden','overflow');
 
-    $toggles.hide();
-    position = $tabs.filter(':checked').parent().data('tabs');
+    item.hide();
+    position = tab.filter(':checked').parent().data('tabs');
 
     if ($window.width() >= 768) {
-      $toggles.eq(position - 1).fadeIn();
+      item.eq(position - 1).fadeIn();
     }
 
-    $tabs.parent().removeClass('hotel-picker--active').eq(position - 1).addClass('hotel-picker--active');
+    tab.parent().removeClass('hotel-picker--active').eq(position - 1).addClass('hotel-picker--active');
 
     $body.css('hidden','auto');
   }
