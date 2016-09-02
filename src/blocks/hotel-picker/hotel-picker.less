@@ -22,12 +22,15 @@
   }
 
   &__icon {
+    display: block;
     position: absolute;
     top: 50%;
     left: ~'calc(50% - 70px)';
     transform: translate(0, -50% - 10px);
     font-size: 18px;
     color: @color-main--green;
+    opacity: 0;
+    transition: all ease 0.4s;
 
     @media (min-width: @screen-md) {
       left: 50%;
@@ -49,12 +52,31 @@
 
   &:before {
     content: '▲';
+    display: block;
     position: absolute;
     left: 50%;
     bottom: -30px;
     transform: translate(-50%, 0);
     color: #fff;
     text-shadow: 0 -1px @gray-light;
+    transition: all ease 0.3s;
+    opacity: 0;
+
+  }
+
+  &--active {
+    .icon {
+      opacity: 1;
+    }
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &--last {
+    &:after {
+      display: none;
+    }
   }
 
 
