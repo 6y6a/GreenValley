@@ -9,6 +9,9 @@ $(document).ready(function(){
   var $arriveMonth = $('#date-picker__arrive-month');
   var $arriveYear = $('#date-picker__arrive-year');
 
+  if ($containerArrive.length == 0) return;
+
+
   // Создать календарь для даты заезда
   var $dateArrive = $containerArrive.pickadate({
     today: false,
@@ -25,6 +28,7 @@ $(document).ready(function(){
 
     container: '#date-arrive'
   });
+
 
   var dateArrivePicker = $dateArrive.pickadate('picker');
 
