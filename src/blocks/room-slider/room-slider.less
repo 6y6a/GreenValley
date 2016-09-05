@@ -4,6 +4,7 @@
 
 
 .room-slider {
+  position: relative;
 
   &__slide {
     display: block;
@@ -14,5 +15,35 @@
   &__img {
     width: 100%;
     height: auto;
+  }
+
+
+  &__left,
+  &__right {
+    .hidden-down(sm);
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: fadeout(#000, 70%);
+    }
+
+  }
+
+  &__left {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &__right {
+    right: 0;
+    border-radius: 5px 0 0 5px;
   }
 }
