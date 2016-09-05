@@ -27,6 +27,9 @@ $(document).ready(function () {
       $slides.removeAttr('style');
     }
 
+    $leftOwl.removeAttr('style');
+    $rightOwl.removeAttr('style');
+
     if ($window.width() >= 1200) {
       initCarousel($owl);
     }
@@ -35,7 +38,7 @@ $(document).ready(function () {
       $slides.eq(1).addClass('review-slider__item--active');
     }
     else if ($window.width() > 0) {
-
+      destroy($owl);
       if ($openBtn.is(':visible')) {
         $slides.eq(1).removeClass('review-slider__item--active');
       }
