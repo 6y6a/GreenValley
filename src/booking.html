@@ -60,15 +60,15 @@
 
               <div class="date-picker__date">
                 <label class="date-picker__tip" for="date-picker__arrive-day"> День </label>
-                <input type="text" class="date-picker__item" name="date-picker__arrive-day"
+                <input type="text" class="date-picker__item" id="date-picker__arrive-day"
                        id="date-picker__arrive-day" maxlength="2" size="2" placeholder="дд">
 
                 <label class="date-picker__tip" for="date-picker__arrive-month"> Месяц </label>
-                <input type="text" class="date-picker__item" name="date-picker__arrive-month"
+                <input type="text" class="date-picker__item" id="date-picker__arrive-month"
                        id="date-picker__arrive-month" maxlength="2" size="2" placeholder="мм">
 
                 <label class="date-picker__tip" for="date-picker__arrive-year"> Год </label>
-                <input type="text" class="date-picker__item  date-picker__item--big" name="date-picker__arrive-year"
+                <input type="text" class="date-picker__item  date-picker__item--big" id="date-picker__arrive-year"
                        id="date-picker__arrive-year" maxlength="4" size="4" placeholder="гггг">
               </div>
             </div>
@@ -78,15 +78,15 @@
 
               <div class="date-picker__date">
                 <label class="date-picker__tip" for="date-picker__leave-day"> День </label>
-                <input type="text" class="date-picker__item" name="date-picker__day" value=""
+                <input type="text" class="date-picker__item" id="date-picker__leave-day" value=""
                        id="date-picker__leave-day" maxlength="2" size="2" placeholder="дд">
 
                 <label class="date-picker__tip" for="date-picker__leave-month"> Месяц </label>
-                <input type="text" class="date-picker__item" name="date-picker__month" value=""
+                <input type="text" class="date-picker__item" id="date-picker__leave-month" value=""
                        id="date-picker__leave-month" maxlength="2" size="2" placeholder="мм">
 
                 <label class="date-picker__tip" for="date-picker__leave-year"> Год </label>
-                <input type="text" class="date-picker__item  date-picker__item--big" name="date-picker__year" value=""
+                <input type="text" class="date-picker__item  date-picker__item--big" id="date-picker__leave-year" value=""
                        id="date-picker__leave-year" maxlength="4" size="4" placeholder="гггг">
               </div>
             </div>
@@ -107,7 +107,7 @@
               <span class="place-picker__img">
                 <span class="sprite-png sprite-png--hotel"></span>
               </span>
-              <input type="radio" class="place-picker__item" name="place-picker__item" value="hotel" checked>
+              <input type="radio" class="place-picker__item" name="place-picker__item" value="hotel">
               <span class="icon  icon--check  place-picker__icon"></span>
             </label>
 
@@ -116,7 +116,7 @@
               <span class="place-picker__img">
                 <span class="sprite-png sprite-png--cottage"></span>
               </span>
-              <input type="radio" class="place-picker__item" name="place-picker__item" value="cottage">
+              <input type="radio" class="place-picker__item" name="place-picker__item" value="cottage" checked>
               <span class="icon  icon--check  place-picker__icon"></span>
             </label>
           </div> <!--booking__place-picker-items-->
@@ -390,24 +390,27 @@
               <label class="personal-info__item">
                 <span class="icon  icon--check  personal-info__icon"></span>
                 <span class="icon  icon--close  personal-info__icon  personal-info__icon--cancel"></span>
-                <input type="text" class="personal-info__form" name="personal-info__name"
+                <input type="text" class="personal-info__form" id="personal-info__name"
                        placeholder="Имя">
               </label>
               <label class="personal-info__item">
-                <!--<span class="icon  icon&#45;&#45;check  personal-info__icon"></span>-->
-                <input type="text" class="personal-info__form" name="personal-info__lastname"
+                <span class="icon  icon--check  personal-info__icon"></span>
+                <span class="icon  icon--close  personal-info__icon  personal-info__icon--cancel"></span>
+                <input type="text" class="personal-info__form" id="personal-info__lastname"
                        placeholder="Фамилия">
               </label>
               <label class="personal-info__item">
-                <!--<span class="icon  icon&#45;&#45;check  personal-info__icon"></span>-->
-                <input type="tel" class="personal-info__form" name="personal-info__phone"
+                <span class="icon  icon--check  personal-info__icon"></span>
+                <span class="icon  icon--close  personal-info__icon  personal-info__icon--cancel"></span>
+                <input type="tel" class="personal-info__form" id="personal-info__phone"
                        placeholder="Номер телефона">
 
                 <div class="personal-info__hint">Мы свяжемся с вами в случае необходимости.</div>
               </label>
               <label class="personal-info__item  personal-info__item--last">
-                <!--<span class="icon  icon&#45;&#45;check  personal-info__icon"></span>-->
-                <input type="email" class="personal-info__form" name="personal-info__email"
+                <span class="icon  icon--check  personal-info__icon"></span>
+                <span class="icon  icon--close  personal-info__icon  personal-info__icon--cancel"></span>
+                <input type="email" class="personal-info__form" id="personal-info__email"
                        placeholder="E-mail">
 
                 <div class="personal-info__hint">На этот адрес мы вышлем вам подтверждение о
@@ -426,9 +429,9 @@
         <h1 class="booking__step-title">Способ оплаты</h1>
 
         <div class="booking__payment-list">
-          <div class="booking__payment-list-item">
+          <div class="booking__payment-list-item" id="payment">
             <label class="payment  booking__payment-item">
-              <span class="icon  icon--check  payment__icon"></span>
+              <span class="icon  icon--check  payment__tab"></span>
               <input type="radio" class="payment__radio" name="payment__item" value="">
               <span class="payment__wrapper">
                 <span class="payment__name">По приезду</span>
@@ -437,8 +440,8 @@
             </label>
 
             <label class="payment  booking__payment-item  booking__payment-item--last">
-              <span class="icon  icon--check  payment__icon  payment__icon--active"></span>
-              <input type="radio" class="payment__radio" name="payment__item" value="">
+              <span class="icon  icon--check  payment__tab  payment__tab--active"></span>
+              <input type="radio" class="payment__radio" name="payment__item" value="" id="payment-now" checked>
               <span class="payment__wrapper">
                 <span class="payment__name">Сейчас</span>
                 <span class="payment__hint">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</span>
@@ -448,13 +451,17 @@
                 <span class="payment__bank-card-wrapper">
                   <label class="payment__bank-card">
                     <span class="payment__description">Номер карты</span>
-                    <input type="text" class="payment__form" name="payment__number"
+                    <span class="icon  icon--check  payment__icon"></span>
+                    <span class="icon  icon--close  payment__icon  payment__icon--cancel"></span>
+                    <input type="text" class="payment__form" id="payment__number"
                            placeholder="0000-0000-0000-0000">
                   </label>
 
                   <label class="payment__bank-card">
                     <span class="payment__description">Фамилия владельца карты</span>
-                    <input type="text" class="payment__form" name="payment__owner"
+                    <span class="icon  icon--check  payment__icon"></span>
+                    <span class="icon  icon--close  payment__icon  payment__icon--cancel"></span>
+                    <input type="text" class="payment__form" id="payment__owner"
                            placeholder="Vladimir Vladimirov">
                   </label>
                 </span>
@@ -462,13 +469,17 @@
                 <span class="payment__bank-card-wrapper  payment__bank-card-wrapper--small">
                   <label class="payment__bank-card">
                     <span class="payment__description">Код CvV</span>
-                    <input type="text" class="payment__form  payment__form--small" name="payment__cvv"
+                    <span class="icon  icon--check  payment__icon"></span>
+                    <span class="icon  icon--close  payment__icon  payment__icon--cancel"></span>
+                    <input type="text" class="payment__form  payment__form--small" id="payment__cvv"
                            placeholder="123">
                   </label>
 
                   <label class="payment__bank-card">
                     <span class="payment__description">действует до</span>
-                    <input type="text" class="payment__form  payment__form--small" name="payment__valid"
+                    <span class="icon  icon--check  payment__icon"></span>
+                    <span class="icon  icon--close  payment__icon  payment__icon--cancel"></span>
+                    <input type="text" class="payment__form  payment__form--small" id="payment__valid"
                            placeholder="01 / 2018">
                   </label>
                 </span>
@@ -477,16 +488,15 @@
           </div>
 
           <div class="booking__result-list-item">
-            <div class="result  booking__result">
+            <div class="result  booking__result" id="result">
               <h1 class="result__title">К оплате</h1>
 
               <p class="result__price">-</p>
 
-              <p class="result__help">
+              <p class="result__help animated" >
                 <span class="icon  icon--exclamation-circle  result__icon"></span>
                 Пожалуйста,
-                <a href="" class="result__link" id="error-link">выберите дату</a>
-                <span>въезда и выезда</span>, чтобы увидеть сумму к оплате
+                <a href="" class="result__link">выберите дату,</a> чтобы увидеть сумму к оплате
               </p>
             </div>
           </div>
@@ -494,7 +504,7 @@
 
         <div class="booking__btn-wrapper">
           <div class="booking__btn">
-            <button class="btn  btn--green" type="button" id="btn">Забронировать</button>
+            <button class="btn  btn--green" type="submit" id="btn">Забронировать</button>
           </div>
         </div>
 
