@@ -57,12 +57,16 @@
   }
 
   &__icon {
+    display: none;
     position: absolute;
     color: @color-main--green;
     font-size: 18px;
     left: 20px;
-    top: 50%;
-    transform: translate(0, -50%);
+    top: 11px;
+
+    &--cancel {
+      color: red;
+    }
   }
 
   &__hint {
