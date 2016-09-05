@@ -1,0 +1,15 @@
+{
+  "name": "GreenValley",
+  "description": "Epic skills learning project",
+  "main": "",
+  "authors": [
+    "Gubin Alexey"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/6y6a/GreenValley",
+  "private": true,
+  "dependencies": {
+    "owl.carousel": "^2.1.6",
+    "pickadate": "^3.5.6"
+  }
+}
