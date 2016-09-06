@@ -283,6 +283,9 @@ gulp.task('js:copy', function (callback) {
   if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
     jsLibs.push(dirs.source + '/js/jquery.js');
   }
+  if(fileExistAndHasContent(dirs.source + '/js/picturefill.js')) {
+    jsLibs.push(dirs.source + '/js/picturefill.js');
+  }
   if(jsLibs){
     console.log('---------- Копирование JS-библиотек');
     return gulp.src(jsLibs)
