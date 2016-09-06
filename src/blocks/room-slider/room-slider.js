@@ -12,14 +12,11 @@ $(document).ready(function () {
   });
 
   $owl.magnificPopup({
-    //disableOn: function() {
-      //return false;
-    //},
     type: 'image',
-    delegate: 'img',
+    delegate: 'picture',
     gallery:{
       enabled:true,
-      navigateByImgClick: true
+      navigateByImgClick: false
     }
   });
 
