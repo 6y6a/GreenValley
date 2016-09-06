@@ -60,10 +60,10 @@
         <ul class="main-nav__list">
           <li class="main-nav__item  main-nav__item--active"><a href="room-list.html" class="main-nav__link">Номера</a>
           </li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
+          <li class="main-nav__item"><a href="room-list.html" class="main-nav__link">Коттедж</a></li>
+          <li class="main-nav__item"><a href="room-list.html" class="main-nav__link">Ресторан</a></li>
+          <li class="main-nav__item"><a href="room-list.html" class="main-nav__link">Отдых</a></li>
+          <li class="main-nav__item"><a href="room-list.html" class="main-nav__link">Контакты</a></li>
         </ul>
       </nav>
       <div class="page-header__contact">
@@ -85,16 +85,18 @@
     <div class="room-info__row">
       <div class="room-info__room-slider">
         <div class="room-slider">
-          <picture class="room-slider__slide">
-            <source srcset="./img/room-slider-md-1.jpg" media="(min-width: 768px)">
-            <img class="room-slider__img" src="./img/room-slider-xs-1.jpg" alt="фото комнаты 1">
-          </picture>
-          <!--<picture class="room-slider__slide">-->
-          <!--<source srcset="./img/room-slider-md-2.jpg" media="(min-width: 768px)">-->
-          <!--<img src="./img/room-slider-md-2.jpg" alt="фото комнаты 2">-->
-          <!--</picture>-->
-          <div class="room-slider__left"></div>
-          <div class="room-slider__right"></div>
+          <div class="icon icon--angle-left room-slider__left"></div>
+          <div class="icon icon--angle-right room-slider__right"></div>
+          <div class="owl-carousel" id="room-slider">
+            <picture class="room-slider__slide">
+              <source srcset="./img/room-slider-md-1.jpg" media="(min-width: 768px)">
+              <img class="room-slider__img" src="./img/room-slider-xs-1.jpg" alt="фото комнаты 1">
+            </picture>
+            <picture class="room-slider__slide">
+              <source srcset="./img/room-slider-md-2.jpg" media="(min-width: 768px)">
+              <img class="room-slider__img" src="./img/room-slider-xs-2.jpg" alt="фото комнаты 2">
+            </picture>
+          </div>
         </div>
       </div>
       <div class="room-info__room-description">
@@ -143,7 +145,7 @@
           <h1 class="room-description__title  room-description__title--third">В стоимтость входит</h1>
           <ul class="room-description__list">
             <li class="room-description__item">
-              <span class="icon  icon--angle-right  room-description__icon"></span> Бассейн с с 8.30 до 10.00
+              <span class="icon  icon--angle-right  room-description__icon"></span> Бассейн с с 8.30 дo 10.00
             </li>
             <li class="room-description__item">
               <span class="icon  icon--angle-right  room-description__icon"></span> Завтрак и обед «шведский стол»
@@ -154,7 +156,7 @@
     </div>
     <div class="room-info__btn">
       <div class="btn btn--icon">Забронировать</div>
-    </div>
+    </diroom-list.htmlv>
     <div class="room-info__subtitle">от <b class="room-info__price">3400</b> руб./сутки</div>
   </div>
 </div>
