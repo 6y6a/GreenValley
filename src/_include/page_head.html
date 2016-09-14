@@ -22,7 +22,8 @@
   }
 
   function n() {
-    if (window.localStorage && window.XMLHttpRequest)if (t(o))c(localStorage.font_css_cache); else {
+    var url = document.URL;
+    if (window.localStorage && window.XMLHttpRequest && url.search(/^file:\/\//g) === -1)if (t(o))c(localStorage.font_css_cache); else {
       var n = new XMLHttpRequest;
       n.open("GET", o, !0), e(n, "load", function () {
         4 === n.readyState && (c(n.responseText), localStorage.font_css_cache = n.responseText, localStorage.font_css_cache_file = o)
